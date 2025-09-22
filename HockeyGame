@@ -1,0 +1,17 @@
+import javax.swing.*;
+
+public class HockeyGame {
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> {
+            JFrame frame = new JFrame("1-Player Hockey — Defend Your Goal");
+            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            frame.setResizable(false);
+            GamePanel panel = new GamePanel(600, 800);
+            frame.add(panel);
+            frame.pack();
+            frame.setLocationRelativeTo(null);
+            frame.setVisible(true);
+            panel.start();
+        });
+    }
+}
