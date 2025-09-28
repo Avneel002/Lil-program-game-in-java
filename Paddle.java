@@ -26,5 +26,13 @@ public class Paddle {
         double closestY = Math.max(y, Math.min(cy, y + height));
         return dx*dx + dy*dy <= r*r;
     }
-
+      
+    public void draw(Graphics2D g, Color c) {
+        g.setColor(c);
+        g.fillRoundRect((int)x, (int)y, (int)width, (int)height, 10, 10);
+    }
+    
+     public double getWidth() { return width; }
+     public void setX(double newX) { this.x = newX; }
+    
 }
